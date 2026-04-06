@@ -1,0 +1,58 @@
+Obstacle Avoiding Robot using Arduino
+📌 Overview
+
+The Obstacle Avoiding Robot is an intelligent autonomous vehicle built using the Arduino Uno R3. It is capable of detecting obstacles in its path and navigating around them without human intervention.
+
+This project demonstrates the fundamental concept of autonomous navigation, widely used in robotics, self-driving vehicles, and industrial automation systems.
+
+🎯 Objectives
+To design an autonomous robot capable of avoiding obstacles
+To understand sensor-based navigation systems
+To implement real-time decision-making using a microcontroller
+To gain practical knowledge of embedded systems and robotics
+🔧 Components Required
+Arduino Uno R3
+HC-SR04 Ultrasonic Sensor (3 units)
+L298N Motor Driver
+DC Gear Motors (BO Motors)
+4WD Robot Chassis
+18650 Li-ion Batteries & Holder
+Jumper Wires
+Breadboard
+Switch
+⚙️ System Architecture
+
+The system consists of three main parts:
+
+Sensing Unit – Ultrasonic sensors detect obstacles
+Processing Unit – Arduino processes sensor data
+Actuation Unit – Motors controlled via motor driver
+🔌 Circuit Connections
+Power Supply
+Battery (+) → Switch → L298N (+12V)
+Battery (–) → L298N GND
+L298N 5V → Arduino 5V
+L298N GND → Arduino GND
+Motor Connections
+OUT1 & OUT2 → Left Motors
+OUT3 & OUT4 → Right Motors
+Motor Control Pins (Arduino → L298N)
+IN1 → Pin 8
+IN2 → Pin 9
+IN3 → Pin 10
+IN4 → Pin 11
+Sensor Connections
+Front Sensor → Trig (6), Echo (7)
+Left Sensor → Trig (2), Echo (3)
+Right Sensor → Trig (4), Echo (5)
+🧠 Working Principle
+
+The robot continuously scans its environment using three ultrasonic sensors.
+
+If front distance > safe limit → moves forward
+If obstacle detected → stops
+Compares left and right distances
+Moves in the direction with more space
+If blocked from all sides → reverses and turns
+
+This ensures smooth and collision-free navigation.
